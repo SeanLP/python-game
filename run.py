@@ -1,8 +1,5 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
-# randomly selects game word froma list of words
+import time
 
 HANGMAN_STAGES = ['''
     +-----+
@@ -54,4 +51,23 @@ HANGMAN_STAGES = ['''
    / \    |
           |
         ------ ''']
-print(HANGMAN_STAGES[6])
+
+superHeroes = ['batman', 'superman', 'wonderwoman', 'aquaman', 'flash',
+               'darkseid', 'galactus', 'joker', 'bane', 'robin', 'thor',
+               'ironman', 'hulk', 'hawkeye', 'mystique', 'spiderman',
+               'thanos', 'deadpool']
+
+tolkienCharacters = ['frodo', 'bilbo', 'sam', 'merry', 'pippin',
+                     'gandalf', 'saruman', 'sauron', 'aragorn',
+                     'legolas', 'gimli', 'borimir', 'faramir',
+                     'gollum', 'shelob', 'balrog', 'lurtz']
+
+name = input("Please enter your name ")
+print("Hello", name.capitalize(), "let's play Hangman!")
+time.sleep(.5)
+print("To win you must guess the secret word chosen by the computer.")
+time.sleep(.5)
+print("You can only guess one letter at a time,") 
+print("if you guess the wrong letter, the man will start to hang!")
+time.sleep(1)
+print("Let's play Hangman!")
