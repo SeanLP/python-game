@@ -1,5 +1,15 @@
 import random
 
+logo = '''
+ _                                              
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/ '''
+
 hangman_stages = ['''
     +------+
     |      |
@@ -84,6 +94,12 @@ GAME_OVER = False
 
 lives = 0
 
+print(logo)
+print()
+print('Welcome to Hangman, SuperHero Edition!')
+print('Rules: Guess a letter, one at a time, to see if its in the secret word')
+print('If you guess wrong, you lose a life and the man will start to hang')
+print()
 # Replaces each letter in secret word with dashes
 for letter in secret_word:
     display += '_'
