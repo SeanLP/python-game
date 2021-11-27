@@ -1,31 +1,38 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hanngman Game
 
-Welcome SeanLP,
+Hangman is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Users try to beat the computer by guessing the letters in the secret word before they run out of lives.
 
-## Reminders
+[Here is the live version of my project](https://python-hangman-ci.herokuapp.com/)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+![Responsive-Website](https://seanlp.github.io/python-game/assets/images/hangman.png)
 
-## Creating the Heroku app
+## How to play
+---
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+This hangman game is based on the classic pen and paper game. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Hangman_(game))
 
-1. `heroku/python`
-2. `heroku/nodejs`
+In this version, the computer randomly chooses a word for the user to guess and hides the letters with dashes.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+The user is then prompted to guess the word and can see how many letters are in it.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+If the user correctly guesses the letter it will appear in the word replacing the dash symbol.
 
-Connect your GitHub repository and deploy as normal.
+If the user's guess is wrong the hangman image will show on the terminal, and any more subsequent wrong guesses will cause the hangman image to fill in and the user loses.
 
-## Constraints
+The user wins if they correctly guessed each letter in the secret word while still retaining any lives.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Features
+---
+* **Existing Features**
 
------
-Happy coding!
+    * Random word generation.
+
+    * The random word's letters are replaced with dash symbols.
+
+    * At the start, the user cannot see the word but can see how many letters it contains.
+
+    * Accepts user input.
+
+![Game-start](https://seanlp.github.io/python-game/assets/images/game-start.png)
