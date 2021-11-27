@@ -36,3 +36,34 @@ The user wins if they correctly guessed each letter in the secret word while sti
     * Accepts user input.
 
 ![Game-start](https://seanlp.github.io/python-game/assets/images/game-start.png)
+
+  
+* **Input**
+
+    * Input validation.
+
+    * You cannot enter a string.
+
+    * You cannot enter a number.
+
+    * You cannot enter the same guess.
+
+![String-warning](https://seanlp.github.io/python-game/assets/images/string.png)
+
+![Number-warning](https://seanlp.github.io/python-game/assets/images/number.png)
+
+![Same-warning](https://seanlp.github.io/python-game/assets/images/same-letter.png)
+
+* **Future Features**
+
+    * Create different categories of words for user to choose from.
+
+    * Alter game difficulty by decreasing starting lives.
+
+## Testing
+---
+* Passed the code through a PEP8 linter and confirmed there are no problems.
+
+* Let the user know if they give an invalid input such as a string or number.
+
+* Tested in my local terminal and the Code Institute Heroku terminal.
