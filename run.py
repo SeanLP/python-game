@@ -1,4 +1,5 @@
 import random
+from time import sleep
 
 logo = '''
  _                                              
@@ -90,25 +91,31 @@ secret_word = random.choice(word)
 
 display = []
 
-GAME_OVER = False
+game_over = False
 
 lives = 0
 
 print(logo)
 print()
 print('Welcome to Hangman, SuperHero Edition!')
+sleep(2)
 print('Rules: Guess a letter, one at a time, to see if its in the secret word')
 print('If you guess wrong, you lose a life and the man will start to hang')
 print()
+sleep(1)
 # Replaces each letter in secret word with dashes
 for letter in secret_word:
     display += '_'
 print(f"{' '.join(display)}")
 print()
 
-while not GAME_OVER:
+while not game_over:
     # Ask for user guess
     guess = input('Guess a letter: ').lower()
+
+    # Checks if user already guessed letter
+    if guess in display:
+        print(f'You already guessed {guess}')
 
     # Check if guessed letter is in secret word
     for position in range(len(secret_word)):
@@ -118,16 +125,22 @@ while not GAME_OVER:
 
     # If guess is incorrect, user's lives increase by 1, if 6 game ends
     if guess not in secret_word:
+        print(f"You guessed {guess}, that's not in the word")
         lives += 1
         if lives == 6:
-            GAME_OVER = True
+            game_over = True
             print(f'Hard luck, you lost, the word was {secret_word}')
-
+        # Guess can't be more than one letter
+        elif len(guess) != 1:
+            print('Please enter a Single Letter')
+        # Guess can't be a number
+        elif guess.isdigit():
+            print('Please enter a Letter')
+    
     print(f"{' '.join(display)}")
 
-    # Checks if there is no more dashes in secret word
     if '_' not in display:
-        GAME_OVER = True
+        game_over = True
         print('Congratulations, you guessed the correct word and won!')
 
     # Displays current hangman stage    
