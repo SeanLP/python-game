@@ -111,7 +111,7 @@ print()
 
 while not game_over:
     # Ask for user guess
-    guess = input('Guess a letter: ').lower()
+    guess = input('Guess a letter: \n').lower()
 
     # Checks if user already guessed letter
     if guess in display:
