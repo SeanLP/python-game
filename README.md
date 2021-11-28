@@ -67,3 +67,37 @@ The user wins if they correctly guessed each letter in the secret word while sti
 * Let the user know if they give an invalid input such as a string or number.
 
 * Tested in my local terminal and the Code Institute Heroku terminal.
+
+## Bugs
+---
+* I was getting an error on the user guess because i forgot to add the .lower() method to the input.
+
+## Remaining Bugs
+---
+* No bugs remaining.
+
+## Validator Testing
+---
+* No errors were returned from PEP8online.com
+
+## Deployment
+---
+* This project was deployed using Code Institute's mock terminal for Heroku.
+
+* Fork or clone this repository.
+
+* Create a new Heroku app.
+
+* Set the buildpacks to Python and NodeJS in that order.
+
+* Link the Heroku app to the repository.
+
+* Click on Deploy.
+
+## Credits
+---
+* Code Institute for the deployment terminal.
+
+* Wikipedia for the details of the Hangman game.
+
+* Code for logo from [Ascii](https://ascii.co.uk/art/hangman)
