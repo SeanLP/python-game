@@ -101,3 +101,5 @@ The user wins if they correctly guessed each letter in the secret word while sti
 * Wikipedia for the details of the Hangman game.
 
 * Code for logo from [Ascii](https://ascii.co.uk/art/hangman)
+
+* Some code was used from [YouTube](https://www.youtube.com/watch?v=wmSysRui0cI&t=308s)
